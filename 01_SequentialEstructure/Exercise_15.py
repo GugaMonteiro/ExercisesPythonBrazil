@@ -1,0 +1,23 @@
+gain_hour = float(input("How much you earn for hour: "))
+hour_month = int(input("How much you worked in this month: "))
+
+full_wage = gain_hour * hour_month
+print("="*40)
+print(f"Your full wage in this month was ${round(full_wage, 2)} dollars.")
+
+impost_1 = (full_wage * 8) / 100
+impost_2 = (full_wage * 11) / 100
+print("-"*40)
+print(f"You payed ${round(impost_1, 3)} to the social security.")
+
+union = (full_wage * 5) / 100
+print("-"*40)
+print(f"You payed ${round(union, 3)} to the syndicate.")
+
+des_wage = full_wage - impost_1 - impost_2 - union
+print("-"*40)
+print(f"In the end you received ${round(des_wage, 3)} in this month.")
+
+des = impost_1 + impost_2 + union
+print("-"*40)
+print(f"You payed ${round(des, 3)} in imposts.")
