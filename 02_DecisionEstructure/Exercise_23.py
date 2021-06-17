@@ -1,3 +1,6 @@
 x = float(input("Type a number: "))
 
-print(f"{round(x, 2)}")
+if x == int(x):
+    print("The value is an integer.")
+else:
+    print("The value is a float.")
