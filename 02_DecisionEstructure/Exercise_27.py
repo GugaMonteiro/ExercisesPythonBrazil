@@ -24,9 +24,9 @@ else:
 fruit_total = apple + straw
 
 if fruit_total > 8 or total > 25:
-    desc = total * 0.1
+    disc = total * 0.1
 
-total -= desc
+total -= disc
 
-print(f"You buyed {straw}kg of strawberries and {apple}kg of apples.")
+print(f"You bought {straw}kg of strawberries and {apple}kg of apples.")
 print(f"You have to pay ${total}.")
