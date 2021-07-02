@@ -12,29 +12,29 @@ while country_b < country_a:
     if country_b < country_a:
         print("The valor has to be greater than the population of the country A. Try again.")
 
-tax_a = -1
+grow_a = -1
 
-while tax_a < 0:
-    tax_a = float(input("\nType the initial tax rate of the country A(%): "))
-    tax_a = (tax_a / 100) + 1
-    if tax_a < 0:
+while grow_a < 0:
+    grow_a = float(input("\nType the initial tax rate of the country A(%): "))
+    grow_a = (grow_a / 100) + 1
+    if grow_a < 0:
         print("The valor has to be greater than zero. Try again.")
 
-tax_b = 2
+grow_b = 2
 
-while tax_b > tax_a:
-    tax_b = float(input("Type the initial tax rate of the country B(%): "))
-    tax_b = (tax_b / 100) + 1
-    if tax_b > tax_a:
-        print("The valor has to be greater than the tax rate of the country A. Try again.")
+while grow_b > grow_a:
+    grow_b = float(input("Type the initial growth rate of the country B(%): "))
+    grow_b = (grow_b / 100) + 1
+    if grow_b > grow_a:
+        print("The valor has to be minor than the growth rate of the country A. Try again.")
 
 year = 0
 
 while country_a != country_b:
-    grow = country_a * tax_a
-    country_a += grow
-    grow2 = country_b * tax_b
-    country_b += grow2
+    grow_total = country_a * grow_a
+    country_a += grow_total
+    grow2_total = country_b * grow_b
+    country_b += grow2_total
     year += 1
 
 print(f"\nIt will be necessary {year} years to country A catch up country B.")
