@@ -8,6 +8,7 @@ while num < 0:
 
 aux = 0
 aux1 = 0
+num_l = [2, 3]
 
 while num > 1:
     aux = sqrt(num)
@@ -18,6 +19,8 @@ while num > 1:
             aux1 += 1
         if aux == 2:
             if aux1 == 0:
-                print(num)
+                num_l.append(num)
         aux -= 1
     num -= 1
+
+print(sorted(num_l))
