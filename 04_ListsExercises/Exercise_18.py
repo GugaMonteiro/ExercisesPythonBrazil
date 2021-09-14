@@ -35,5 +35,7 @@ while True:
     if vote in players:
         votes[vote] = votes.get(vote, 0) + 1
 
+print(votes)
+
 for num, quant in votes.items():
     print(f"{players[num]}: {quant}")
